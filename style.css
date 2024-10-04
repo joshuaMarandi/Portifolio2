@@ -212,3 +212,105 @@ nav .navlinks li a{
         padding:40px 0px;
     }
 }
+
+
+/* Projects Section */
+.projects-section {
+    padding: 50px 20px;
+    background-color: #222;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-card {
+    width: 30%;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    margin: 15px 0 10px;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form {
+    width: 45%;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-info {
+    width: 45%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Responsive for smaller devices */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    form, .contact-info {
+        width: 100%;
+    }
+}

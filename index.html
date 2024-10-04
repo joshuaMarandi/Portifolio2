@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Portfolio Website Design</title>
     <link rel="stylesheet" href="style.css">
-    <!----Font awesome cdn  font icon css -->
+    <!----Font awesome cdn font icon css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
+
 <body>
-     <div class="hero-header">
+    <div class="hero-header">
         <div class="wrapper">
             <header>
                 <div class="logo">
@@ -25,27 +27,26 @@
                     </div>
                     <ul class="navlinks">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#projects">Portfolio</a></li>
                         <li><a href="#">Resume</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </header>
+
             <div class="container">
-                 <div class="hero-pic">
+                <div class="hero-pic">
                     <img src="images/Wazawa_Hub.jpeg" alt="profile pic">
-                 </div>
-                 <div class="hero-text">
-                    <h5>Hi I'm <span class="input">Web Developer (Laravel) </span></h5>
+                </div>
+                <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Web Developer (Laravel)</span></h5>
                     <h1>Joshua Marandi</h1>
-                    <p> An experienced web developer, SEO engineer, logo and post Designer.Having me as a freelancer is having the treasure you needed
-                        
-                    </p>
+                    <p>An experienced web developer, SEO engineer, logo and post Designer. Having me as a freelancer is having the treasure you needed.</p>
 
                     <div class="btn-group">
-                       <a href="#" class="btn active">Download CV</a>
-                       <a href="#" class="btn">Contact</a>
+                        <a href="#" class="btn active">Download CV</a>
+                        <a href="#" class="btn">Contact</a>
                     </div>
 
                     <div class="social">
@@ -53,31 +54,78 @@
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#"><i class="fa-brands fa-dribbble"></i></a>
-                        <a href="#"><i class="fa-brands fa-pintrest"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
                     </div>
-                 </div>
+                </div>
             </div>
         </div>
-     </div>
-     <!---typed js for typing text effect-->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
-     <script>
-        /** creating button click show hide navbar **/
-        var togglebtn=document.querySelector(".togglebtn");
-        var nav=document.querySelector(".navlinks");
-        var links=document.querySelector(".navlinks li");
+    </div>
 
-        togglebtn.addEventListener("click", function(){
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="images/Wazawa_Hub.jpeg" alt="Project 1">
+                <h3>Project One</h3>
+                <p>A description of Project One. This project was built using Laravel and Vue.js.</p>
+            </div>
+            <div class="project-card">
+                <img src="images/Wazawa_Hub.jpeg" alt="Project 2">
+                <h3>Project Two</h3>
+                <p>A description of Project Two. This project focuses on responsive design and user experience.</p>
+            </div>
+            <div class="project-card">
+                <img src="images/Wazawa_Hub.jpeg" alt="Project 3">
+                <h3>Project Three</h3>
+                <p>A description of Project Three. It is an e-commerce website built using Laravel.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <form action="#" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <p><i class="fa-solid fa-phone"></i> +123 456 7890</p>
+                <p><i class="fa-solid fa-envelope"></i> joshua@example.com</p>
+                <p><i class="fa-solid fa-map-marker-alt"></i> Nairobi, Kenya</p>
+            </div>
+        </div>
+    </section>
+
+    <!---typed js for typing text effect-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function () {
             this.classList.toggle("click");
             nav.classList.toggle("open");
-        })
+        });
 
-        var typed=new Typed(".input",{
-            strings:["Web development (Laravel)","UX Designer","Web Developer"],
-            typedSpeed:70,
-            backSpeed:55,
-            loop:true
-        })
-     </script>
+        var typed = new Typed(".input", {
+            strings: ["Web development (Laravel)", "UX Designer", "Web Developer"],
+            typedSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
+    </script>
 </body>
+
 </html>
